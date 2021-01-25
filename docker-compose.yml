@@ -1,0 +1,31 @@
+version: "3.3"
+   
+services:
+  db:
+    restart: always
+    image: mongo
+    volumes:
+      - ./data/db:/data/db
+    ports:
+     - "27017:27017"
+    command: mongod
+  backend:
+    restart: always
+    build: ./backend/
+    command: npm run start
+    volumes:
+      - ./backend/src/:/usr/src/app/src/:rw
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+  frontend:
+    restart: always
+    build: ./front/
+    command: npm run start
+    volumes:
+      - ./front/src/:/usr/src/app/src/
+    ports:
+      - "8080:3000"
+    depends_on:
+      - backend

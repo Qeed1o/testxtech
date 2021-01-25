@@ -1,0 +1,50 @@
+div.inputfield{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    border: 1px solid rgba(55, 59, 79, 0.24);
+    margin-top: 10px;
+    height: 48px;
+
+    & > label {
+        position: relative;
+        top: 15px;
+        left: 7px;
+        visibility: hidden;
+        transition: all .3s ease;
+        font-size: 16px;
+        color: rgba(55, 59, 79, 0.89);
+        opacity: 0.7;
+    }
+
+    & > input {
+        position: relative;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -ms-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+        top: -5px;
+        left: 5px;
+        border-radius: 2px;
+        background: transparent;
+        border: 0px;
+        outline: 0;
+        font-size: 16px;
+        height: 32px;
+    }
+
+    input:focus::placeholder {
+        color: transparent;
+    }
+
+    & > input:focus + label, & > input:not([value=""]) + label{
+        outline: 0;
+        visibility: visible;
+        top: 0px;
+    }
+}
+
+div.not-valid label{
+    color: red;
+}
