@@ -1,5 +1,10 @@
-#Backend - TypeScript express application
-#Front - front-end React application
+Backend
+====================
+-TypeScript express application
+  
+Front
+====================
+-Front-end React application
 
-To run it:
+__To run it:__
 `docker-compose up` inside project folder
