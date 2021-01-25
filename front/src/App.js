@@ -23,9 +23,11 @@ const App = ({ isModalShow, currentUser, setModal }) => {
             <RegistrationPage />
           </Route>
         </Switch>
-        {isModalShow ? (
-          <ModalPage {...currentUser} closeModal={() => setModal(false)} />
-        ) : null}
+        <ModalPage
+          {...currentUser}
+          isShow={isModalShow}
+          closeModal={() => setModal(false)}
+        />
       </div>
     </BrowserRouter>
   );

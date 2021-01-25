@@ -1,5 +1,5 @@
 div.modal-wrapper{
-    position: initial;
+    position: relative;
     background: #FFFFFF;
     border: 1px solid rgba(55, 59, 79, 0.2);
     box-sizing: border-box;
@@ -11,6 +11,8 @@ div.modal-wrapper{
     flex-direction: column;
     justify-items: center;
     color: #494362;
+    transition: all .3s ease;
+    top: -60vw;
     
     & > div.column {
         display: flex;
@@ -58,5 +60,20 @@ div.modal-wrapper{
         font-size: 28px;
         line-height: 32px;
         color: #373B4F;
+    }
+}
+
+div.modal{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease;
+}
+
+div.modal-visible{
+    opacity: 1;
+    visibility: visible;
+
+    & > div.modal-wrapper {
+        top: 0;
     }
 }

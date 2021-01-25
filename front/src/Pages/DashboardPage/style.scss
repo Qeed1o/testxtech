@@ -41,6 +41,14 @@ div.table {
                 margin-left: 5px;
                 justify-items: center;
                 // justify-content: center;
+
+                & > p.value-text {
+                    width : 10vw;
+                    overflow:hidden;
+                    display:inline-block;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
             }
 
 

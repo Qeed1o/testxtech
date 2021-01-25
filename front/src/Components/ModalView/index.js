@@ -11,9 +11,13 @@ const ModalPage = ({
   email,
   about,
   closeModal,
+  isShow,
 }) => {
   return (
-    <div className="content modal" onClick={() => closeModal()}>
+    <div
+      className={`content modal ${isShow ? "modal-visible" : ""}`}
+      onClick={() => closeModal()}
+    >
       <div className="modal-wrapper">
         <div className="modal-name">Профиль</div>
         <div className="row">

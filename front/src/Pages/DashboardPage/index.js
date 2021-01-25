@@ -37,19 +37,19 @@ const row = ({
       <p>{id}</p>
     </div>
     <div className="column name">
-      <p>{name}</p>
+      <p className="value-text">{name}</p>
     </div>
     <div className="column secondName">
-      <p>{secondName}</p>
+      <p className="value-text">{secondName}</p>
     </div>
     <div className="column patronymicName">
-      <p>{patronymicName}</p>
+      <p className="value-text">{patronymicName}</p>
     </div>
     <div className="column phone">
-      <p>{phone}</p>
+      <p className="value-text">{phone}</p>
     </div>
     <div className="column email">
-      <p>{email}</p>
+      <p className="value-text">{email}</p>
     </div>
   </div>
 );
