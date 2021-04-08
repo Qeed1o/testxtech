@@ -24,7 +24,7 @@ const ImageInput = () => {
     reader.onload = () => {
       setSrc(reader.result);
     };
-    target.files[0] && reader.readAsDataURL(target.files[0]);
+    target.files[0] ? reader.readAsDataURL(target.files[0]) : setSrc(null)
   }, [])
 
   const handleClick = useCallback(() => {
