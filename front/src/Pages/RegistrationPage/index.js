@@ -32,7 +32,6 @@ const RegistrationPage = () => {
   const [phoneNumber, setPhoneNumber] = useState(initialTextField);
   const [email, setEmail] = useState(initialTextField);
   const [about, setAbout] = useState("");
-  const [file, setFile] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -64,16 +63,7 @@ const RegistrationPage = () => {
           >
             <div className="row">
               <div className="column form-image">
-                <ImageInput
-                  onChange={({ target }) => {
-                    const reader = new FileReader();
-                    reader.onload = () => {
-                      setFile(reader.result);
-                    };
-                    reader.readAsDataURL(target.files[0]);
-                  }}
-                  src={file}
-                />
+                <ImageInput />
               </div>
               <div className="column form-inputs">
                 <InputField
